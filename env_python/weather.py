@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 
-def get_current_weather(city="Kansas City"):
+def get_current_weather(city="Cairo City"):
 
     request_url = f'http://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=imperial'
 
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # Check for empty strings or string with only spaces
     # This step is not required here
     # if not bool(city.strip()):
-    #     city = "Kansas City"
+    #     city = "Cairo City"
 
     weather_data = get_current_weather(city)
 
